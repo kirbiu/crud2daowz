@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>edit</title>
+  </head>
+  <body>
+    <% if (user){ %>
+    <form action="/update" method="POST">
+        <input id="id" name="id" value='<%= user.id%>'hidden>
+        <div>
+          <label>Nombre de invocador</label>
+          <input type="text" id="nombre" name="nombre" value='<%= user.nombredeinvocador%>'>
+        </div>
+        <div>
+          <label>main</label>
+          <input type="text" id="main" name="main" value='<%= user.main%>'>
+        </div>
+        <div>
+            <label>rol</label>
+            <select id="rol" name="rol">
+                <option value="adc">ad carry</option>
+                <option value="sup">support</option>
+                <option value="mid" selected>mid</option>
+                <option value="jg">jungla</option>
+                <option value="top">top</option>
+            </select>
+          </div>
+          <div>
+            <label>servidor</label>
+            <input type="text" id="sevidor" name="servidor" value='<%= user.servidor%>'>
+          </div>
+        <button type="submit">Crear</button>
+        <a href="/">Cancelar</a>
+
+      </form>
+      <% } %>
+  </body>
+</html>

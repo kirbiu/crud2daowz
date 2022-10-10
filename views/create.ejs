@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>crear</title>
+  </head>
+  <body>
+    <form action="/save" method="POST">
+
+        <div>
+          <label>Nombre de invocador</label>
+          <input type="text" id="nombre" name="nombre">
+        </div>
+        <div>
+          <label>main</label>
+          <input type="text" id="main" name="main">
+        </div>
+        <div>
+            <label>rol</label>
+            <select id="rol" name="rol">
+                <option value="adc">ad carry</option>
+                <option value="sup">support</option>
+                <option value="mid"selected>mid</option>
+                <option value="jg">jungla</option>
+                <option value="top">top</option>
+            </select>
+          </div>
+          <div>
+            <label>servidor</label>
+            <input type="text" id="sevidor" name="servidor">
+          </div>
+        <button type="submit">Crear</button>
+        <a href="/">Cancelar</a>
+
+      </form>
+  </body>
+</html>
